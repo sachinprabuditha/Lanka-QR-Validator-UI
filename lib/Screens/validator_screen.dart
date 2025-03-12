@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_scanner/mobile_scanner.dart';
+import 'package:screens/Screens/mobile_scanner.dart';
+import 'package:screens/Screens/qr_scanner_screen.dart';
 
 class ValidatorScreen extends StatelessWidget {
   const ValidatorScreen({super.key});
@@ -90,10 +93,13 @@ class ValidatorScreen extends StatelessWidget {
                 ),
 
               const SizedBox(height: 20),
-
               GestureDetector(
                 onTap: () {
                   // Handle scan QR code click
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => QrCodeScanner()),
+              );
                 },
                 child: Container(
                   width: 250,
@@ -166,6 +172,10 @@ class ValidatorScreen extends StatelessWidget {
                   GestureDetector(
                     onTap: () {
                       // Handle QR code
+                       Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => QRScannerScreen()),
+              );
                     },
                     child: Container(
                       width: 250,
