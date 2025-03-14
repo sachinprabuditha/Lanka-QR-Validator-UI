@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:screens/Screens/mobile_scanner.dart';
 import 'package:screens/Screens/qr_scanner_screen.dart';
 
@@ -98,7 +97,7 @@ class ValidatorScreen extends StatelessWidget {
                   // Handle scan QR code click
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => QrCodeScanner()),
+                    MaterialPageRoute(builder: (context) => QRScannerScreen()),
               );
                 },
                 child: Container(
